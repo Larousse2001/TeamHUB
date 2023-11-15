@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <style>
+        input {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 16px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Sudoku Solver</h2>
+
+<table id="sudoku-grid">
+    <!-- Initial Sudoku grid goes here -->
+</table>
+
+<button onclick="solveSudoku()">Solve Sudoku</button>
+
+<script>
+    // Sample initial Sudoku grid (0 represents empty cells)
+    const initialGrid = [
+        [5, 3, 0, 0, 7, 0, 0, 0, 0],
+        [6, 0, 0, 1, 9, 5, 0, 0, 0],
+        [0, 9, 8, 0, 0, 0, 0, 6, 0],
+        [8, 0, 0, 0, 6, 0, 0, 0, 3],
+        [4, 0, 0, 8, 0, 3, 0, 0, 1],
+        [7, 0, 0, 0, 2, 0, 0, 0, 6],
+        [0, 6, 0, 0, 0, 0, 2, 8, 0],
+        [0, 0, 0, 4, 1, 9, 0, 0, 5],
+        [0, 0, 0, 0, 8, 0, 0, 7, 9]
+    ];
+
+    function generateGrid() {
+        const table = document.getElementById("sudoku-grid");
+
+        for (let i = 0; i < 9; i++) {
+            const row = document.createElement("tr");
+
+            for (let j = 0; j < 9; j++) {
+                const cell = document.createElement("td");
+                const input = document.createElement("input");
+                input.type = "text";
+                input.maxLength = 1;
+                input.value = initialGrid[i][j] === 0 ? "" : initialGrid[i][j];
+                cell.appendChild(input);
+                row.appendChild(cell);
+            }
+
+            table.appendChild(row);
+        }
+    }
+
+    function solveSudoku() {
+        const grid = [];
+
+        // Get the current values from the HTML grid
+        for (let i = 0; i < 9; i++) {
+            grid[i] = [];
+            for (let j = 0; j < 9; j++) {
+                const input = document.getElementById(`input-${i}-${j}`);
+                grid[i][j] = parseInt(input.value) || 0;
+            }
+        }
+
+        // Call the solver function (replace with your own solver logic)
+        const solvedGrid = sudokuSolver(grid);
+
+        // Update the HTML grid with the solved values
+        for (let i = 0; i < 9; i++) {
+            for (let j = 0; j < 9; j++) {
+                const input = document.getElementById(`input-${i}-${j}`);
+                input.value = solvedGrid[i][j];
+            }
+        }
+    }
+
+    function sudokuSolver(grid) {
+        // Implement your Sudoku solver logic (e.g., backtracking algorithm)
+        // This is a simple example, and you might want to replace it with a more sophisticated solver.
+
+        // This is just a placeholder, not a working solver
+        return grid;
+    }
+
+    // Generate the initial Sudoku grid
+    generateGrid();
+</script>
+
+</body>
+</html>
