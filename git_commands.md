@@ -67,4 +67,16 @@ git reflog show user/add-sudoku-features
 # Display commit history in one line
 git log --oneline
 
+git branch user/add-sudoku-features
+git checkout user/add-sudoku-features
+git add .
+git commit -m "Your commit message"
+git merge user/add-sudoku-features
+git checkout mehdi/add-sudoku-features
+git push --set-upstream origin mehdi/add-sudoku-features
+git checkout main
+git pull origin main
+git merge mehdi/add-sudoku-features
+git push
+
 # Enjoy *__*
