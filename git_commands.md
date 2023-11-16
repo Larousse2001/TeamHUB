@@ -1,6 +1,5 @@
 ## Git Commands
 
-### Create and Switch to Another Branch
 ```bash
 # Create a new branch
 git branch user/add-sudoku-features
