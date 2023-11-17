@@ -25,7 +25,7 @@ Access the project presentation on Canva for an overview of the project's featur
 As this project is implemented using HTML, CSS, and JavaScript, there is no specific installation process required. Simply clone the repository or download the source code to your local machine and open the `index.html` file in a web browser.
 
 ## Documentation
-For detailed documentation and project presentation, please refer to the [Project Presentation on Canva](https://www.canva.com/design/DAFSsRv-nf0/Jia5A4nNr48v52xH_kbxqg/view?utm_content=DAFSsRv-nf0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink).
+For detailed documentation and project presentation, please refer to the [Project Presentation on Canva](https://www.canva.com/design/DAF0auU50pE/N0cYdG2mdrKYf9Ai2jwn4g/view?utm_content=DAF0auU50pE&utm_campaign=designshare&utm_medium=link&utm_source=editor).
 
 ## License
 This project is licensed under the MIT License.
